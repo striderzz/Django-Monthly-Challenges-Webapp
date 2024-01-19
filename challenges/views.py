@@ -1,20 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.shortcuts import render
+
 
 monthly_challenges ={
-   "jan":"This is Jan Task! ",
-   "feb":"This is Feb Task! ",
-   "mar":"This is March Task! ",
-   "apr":"This is April Task! ",
-   "may":"This is May Task! ",
-   "jun":"This is June Task! ",
-   "jul":"This is July Task! ",
-   "aug":"This is August Task! ",
-   "sep":"This is September Task! ",
-   "oct":"This is October Task! ",
-   "nov":"This is November Task! ",
-   "dec":"This is Dec Task! ",
+    "january": "This is January Task!",
+    "february": "This is February Task!",
+    "march": "This is March Task!",
+    "april": "This is April Task!",
+    "may": "This is May Task!",
+    "june": "This is June Task!",
+    "july": "This is July Task!",
+    "august": "This is August Task!",
+    "september": "This is September Task!",
+    "october": "This is October Task!",
+    "november": "This is November Task!",
+    "december": "This is December Task!"
 
 }
 
@@ -25,13 +27,14 @@ def index(request):
   months = list(monthly_challenges.keys())
 
   for month in months:
-    capitalized_month = month.capitalize()
+    capitalized_month = month.capitalize() 
     month_path =  reverse("monthly-challenge",args =[month])
     list_items += f"<li><a href=\"{month_path}\">{capitalized_month}</a></li>"
   
 
   response_data =f"<ul>{list_items}</ul>"
-  return HttpResponse(response_data)
+  #return HttpResponse(response_data)
+  return(request,"challenges/challenge.html")
 
 def monthly_challenge_by_number(request, month):
   months = list(monthly_challenges.keys())
@@ -45,6 +48,8 @@ def monthly_challenge_by_number(request, month):
 def monthly_challenge(request,month):
   try:
     challenges_text = monthly_challenges[month]
-    return HttpResponse(f'<h1>{challenges_text}</h1>')
+    content = {"month_name":month, "text":challenges_text}
+    return render(request,"challenges/challenge.html",content)
+   
   except:
-    return HttpResponseNotFound("This month is not supported! ")
+    return HttpResponseNotFound("<h1>This month is not supported!</h1> ")
