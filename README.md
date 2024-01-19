@@ -10,5 +10,5 @@ Interactive Templates: Engage with well-designed and interactive templates for a
 ### 1. Index Page
 ![Screenshot (1533)](https://github.com/striderzz/Django-Daily-Challenges-Webapp/assets/72110940/f8c52c23-cc5a-4268-a3f4-7c15709910bb)
 
-### 2, Monthly Challenge Page
+### 2. Monthly Challenge Page
 ![Screenshot (1532)](https://github.com/striderzz/Django-Daily-Challenges-Webapp/assets/72110940/98324f67-6885-4a72-8c0d-f9acb82826a3)
