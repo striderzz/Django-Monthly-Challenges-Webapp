@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+    }
+    
+  </style>
+</head>
+<body>
+  <ul>
+  {% for month in months %}
+       
+    <li><a href="{% url 'monthly-challenge' month %}">{{ month|title }}</a></li>
+  {% endfor %}
+  </ul>
+</body>
+</html>

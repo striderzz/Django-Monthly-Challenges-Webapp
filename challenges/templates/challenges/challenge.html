@@ -5,15 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{month_name}} Challenge</title>
   <style>
-    body{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    body {
+      font-family: 'Poppins', sans-serif;
       font-weight: 300;
+    }
+    div{
+      margin: 0 auto;
+      border: 5px solid black;
+      text-align:center;
+      max-width:1000px;
     }
   </style>
 </head>
 <body>
+  <div>
+    <h1>{{month_name|title}} Challenge</h1>
+  {% if text == None %}
+   <h2>No Tasks for this month</h2>
+ 
+  {% else %}
+   <h2>{{text}}</h2>
   
-  <h1>{{month_name|title}} Challenge</h1>
-  <h2>{{text}}</h2>
+  {% endif %} 
+    
+  </div>  
+  
+  
 </body>
 </html>
