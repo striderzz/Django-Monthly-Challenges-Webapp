@@ -8,7 +8,9 @@ Dynamic URLs: Seamlessly navigate to individual challenge details by clicking on
 Interactive Templates: Engage with well-designed and interactive templates for an immersive learning experience.
 ## Screenshots
 ### 1. Index Page
-![Screenshot (1533)](https://github.com/striderzz/Django-Daily-Challenges-Webapp/assets/72110940/f8c52c23-cc5a-4268-a3f4-7c15709910bb)
+![Screenshot (1534)](https://github.com/striderzz/Django-Monthly-Challenges-Webapp/assets/72110940/acb6c8f6-654a-4cbe-b7ea-f47513aa6c29)
+
 
 ### 2. Monthly Challenge Page
-![Screenshot (1532)](https://github.com/striderzz/Django-Daily-Challenges-Webapp/assets/72110940/98324f67-6885-4a72-8c0d-f9acb82826a3)
+
+![Screenshot (1536)](https://github.com/striderzz/Django-Monthly-Challenges-Webapp/assets/72110940/bf97dcee-4155-4a13-bb6a-1da8eb82af43)
